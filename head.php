@@ -3,7 +3,7 @@
   <?php
     $js = array("jquery", "index", "app");
   ?>
-  
+
   <?php
     foreach ($js as $j) {
       ?><script src="assets/js/<?php echo $j.".js"; ?>"></script>

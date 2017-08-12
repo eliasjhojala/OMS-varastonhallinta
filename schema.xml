@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.0.10.18
+- https://www.phpmyadmin.net
+-
+- Palvelin: localhost:3306
+- Luontiaika: 12.08.2017 klo 19:34
+- Palvelimen versio: 5.5.54-cll
+- PHP:n versio: 5.6.30
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="olarinma_varasto" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="actions">
+                CREATE TABLE `actions` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `user_id` int(11) NOT NULL,
+                  `thing_id` int(11) NOT NULL,
+                  `action_type_id` int(11) NOT NULL,
+                  `note` text NOT NULL,
+                  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+                  PRIMARY KEY (`id`),
+                  UNIQUE KEY `id_2` (`id`),
+                  KEY `id` (`id`),
+                  KEY `id_3` (`id`),
+                  KEY `id_4` (`id`)
+                ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="action_types">
+                CREATE TABLE `action_types` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `name` text NOT NULL,
+                  PRIMARY KEY (`id`),
+                  UNIQUE KEY `id` (`id`)
+                ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="classes">
+                CREATE TABLE `classes` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `name` text NOT NULL,
+                  PRIMARY KEY (`id`),
+                  UNIQUE KEY `id_2` (`id`),
+                  KEY `id` (`id`)
+                ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="items">
+                CREATE TABLE `items` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `name` text NOT NULL,
+                  `class_id` int(11) NOT NULL,
+                  PRIMARY KEY (`id`),
+                  UNIQUE KEY `id` (`id`),
+                  KEY `id_2` (`id`)
+                ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="users">
+                CREATE TABLE `users` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `first_name` text NOT NULL,
+                  `last_name` text NOT NULL,
+                  `nick_name` text NOT NULL,
+                  `member_id` int(11) NOT NULL,
+                  PRIMARY KEY (`id`),
+                  UNIQUE KEY `id` (`id`),
+                  KEY `id_2` (`id`),
+                  KEY `id_3` (`id`)
+                ) ENGINE=MyISAM AUTO_INCREMENT=228 DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Tietokanta: 'olarinma_varasto'
+    -->
+    <database name="olarinma_varasto">
+        <!-- Taulu actions -->
+        <!-- Taulu action_types -->
+        <!-- Taulu classes -->
+        <!-- Taulu items -->
+        <!-- Taulu users -->
+        <table name="users">
+            <column name="id">1</column>
+            <column name="first_name">Maija</column>
+            <column name="last_name">Meikäläinen</column>
+            <column name="nick_name">Maikki</column>
+            <column name="member_id">123</column>
+        </table>
+        <table name="users">
+            <column name="id">227</column>
+            <column name="first_name">ahsdgdsgds</column>
+            <column name="last_name">sdhdsg</column>
+            <column name="nick_name">sdhsdg</column>
+            <column name="member_id">0</column>
+        </table>
+        <table name="users">
+            <column name="id">226</column>
+            <column name="first_name">ahsdgdsgds</column>
+            <column name="last_name">sdhdsg</column>
+            <column name="nick_name">sdhsdg</column>
+            <column name="member_id">0</column>
+        </table>
+        <table name="users">
+            <column name="id">225</column>
+            <column name="first_name">ahsdgdsgds</column>
+            <column name="last_name">sdhdsg</column>
+            <column name="nick_name">sdhsdg</column>
+            <column name="member_id">0</column>
+        </table>
+        <table name="users">
+            <column name="id">224</column>
+            <column name="first_name">ahsdgdsgds</column>
+            <column name="last_name">sdhdsg</column>
+            <column name="nick_name">sdhsdg</column>
+            <column name="member_id">0</column>
+        </table>
+        <table name="users">
+            <column name="id">223</column>
+            <column name="first_name">ahsdgdsgds</column>
+            <column name="last_name">sdhdsg</column>
+            <column name="nick_name">sdhsdg</column>
+            <column name="member_id">0</column>
+        </table>
+        <table name="users">
+            <column name="id">222</column>
+            <column name="first_name">ahsdgdsgds</column>
+            <column name="last_name">sdhdsg</column>
+            <column name="nick_name">sdhsdg</column>
+            <column name="member_id">0</column>
+        </table>
+        <table name="users">
+            <column name="id">221</column>
+            <column name="first_name">ahsdgdsgds</column>
+            <column name="last_name">sdhdsg</column>
+            <column name="nick_name">sdhsdg</column>
+            <column name="member_id">0</column>
+        </table>
+        <table name="users">
+            <column name="id">220</column>
+            <column name="first_name">ahsdgdsgds</column>
+            <column name="last_name">sdhdsg</column>
+            <column name="nick_name">sdhsdg</column>
+            <column name="member_id">0</column>
+        </table>
+        <table name="users">
+            <column name="id">219</column>
+            <column name="first_name">ahsdgdsgds</column>
+            <column name="last_name">sdhdsg</column>
+            <column name="nick_name">sdhsdg</column>
+            <column name="member_id">0</column>
+        </table>
+        <table name="users">
+            <column name="id">218</column>
+            <column name="first_name">ahsdgdsgds</column>
+            <column name="last_name">sdhdsg</column>
+            <column name="nick_name">sdhsdg</column>
+            <column name="member_id">0</column>
+        </table>
+        <table name="users">
+            <column name="id">217</column>
+            <column name="first_name">ahsdgdsgds</column>
+            <column name="last_name">sdhdsg</column>
+            <column name="nick_name">sdhsdg</column>
+            <column name="member_id">0</column>
+        </table>
+        <table name="users">
+            <column name="id">216</column>
+            <column name="first_name">ahsdgdsgds</column>
+            <column name="last_name">sdhdsg</column>
+            <column name="nick_name">sdhsdg</column>
+            <column name="member_id">0</column>
+        </table>
+        <table name="users">
+            <column name="id">215</column>
+            <column name="first_name">ahsdgdsgds</column>
+            <column name="last_name">sdhdsg</column>
+            <column name="nick_name">sdhsdg</column>
+            <column name="member_id">0</column>
+        </table>
+        <table name="users">
+            <column name="id">214</column>
+            <column name="first_name">ahsdgdsgds</column>
+            <column name="last_name">sdhdsg</column>
+            <column name="nick_name">sdhsdg</column>
+            <column name="member_id">0</column>
+        </table>
+        <table name="users">
+            <column name="id">213</column>
+            <column name="first_name">ahsdgdsgds</column>
+            <column name="last_name">sdhdsg</column>
+            <column name="nick_name">sdhsdg</column>
+            <column name="member_id">0</column>
+        </table>
+        <table name="users">
+            <column name="id">212</column>
+            <column name="first_name">ahsdgdsgds</column>
+            <column name="last_name">sdhdsg</column>
+            <column name="nick_name">sdhsdg</column>
+            <column name="member_id">0</column>
+        </table>
+    </database>
+</pma_xml_export>
