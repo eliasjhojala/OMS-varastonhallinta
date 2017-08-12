@@ -1,5 +1,6 @@
 <?php
-$db = new mysqli('localhost', 'olarinma_varasto', 'OMSalk1977', 'olarinma_varasto');
+include 'auth.php';
+$db = new mysqli($servername, $username, $password, $dbname);
 
 if($db->connect_errno > 0){
     die('Unable to connect to database [' . $db->connect_error . ']');
