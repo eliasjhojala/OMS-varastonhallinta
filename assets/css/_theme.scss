@@ -1,0 +1,47 @@
+  @import "https://fonts.googleapis.com/css?family=Open+Sans|Material+Icons|Ubuntu|Roboto";
+  
+  $theme-color-red: rgb(244, 67, 54);
+  $theme-color-red-with-alpha: rgba(244, 67, 54, 0.7);
+  $main-header-color: rgba(0,0,0,0.87);
+  $main-content-color: rgba(0,0,0,0.87);
+  $linkbar-link-color: rgb(255, 255, 255);
+  $menubox-link-color: rgba(0,0,0,0.87);
+  $bottom-bar-bg-color: #33652e;
+  $bottom-bar-text-color: white;
+  $linkbar-bg-color: #33652e;
+  $linkbar-bg-color-with-alpha: $theme-color-red-with-alpha;
+
+
+  @mixin material-shadow($size:null) {
+    @if ($size) {
+      @if ($size == 1) {
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      } @else if ($size == 2) {
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      } @else if ($size == 3) {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+      } @else if ($size == 4) {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      } @else if ($size == 5) {
+        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+      }
+    }
+    @else {
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
+      
+  }
+  @mixin material() {
+    border-radius: 2px;
+    @include material-shadow(1);
+  }
+  @mixin no-material() {
+    border-radius: 0px;
+    box-shadow: none;
+  }
+  @mixin material-parent-box() {
+    border-radius: 0px;
+    box-shadow: none;
+    background: none;
+    padding: 0px;
+  }
