@@ -20,7 +20,7 @@ function newUser($f_n, $l_n, $n_n, $mem_id) {
 }
 
 function newItem($f_n, $l_n, $n_n, $mem_id) {
-  $sql = "INSERT INTO users (first_name, last_name, nick_name, member_id)
+  $sql = "INSERT INTO items (first_name, last_name, nick_name, member_id)
   VALUES ('$f_n', '$l_n', '$n_n', '$mem_id')";
 
   sqlQuery($sql);
