@@ -19,10 +19,15 @@ function newUser($f_n, $l_n, $n_n, $mem_id) {
   sqlQuery($sql);
 }
 
-function newItem($f_n, $l_n, $n_n, $mem_id) {
-  $sql = "INSERT INTO items (first_name, last_name, nick_name, member_id)
-  VALUES ('$f_n', '$l_n', '$n_n', '$mem_id')";
-
+function newItem($item_id, $name, $class_id) {
+  global $current_user_id;
+  
+  $sql = "INSERT INTO items (id, name, class_id)
+  VALUES ('$item_id', '$name', '$class_id')";
+  sqlQuery($sql);
+  
+  $sql = "INSERT INTO actions (user_id, thing_id, action_type_id)
+  VALUES ('$current_user_id', '$item_id', '1')";
   sqlQuery($sql);
 }
 
@@ -55,8 +60,4 @@ function closeConnection() { //Should not be used in most cases
   $dbConn->close();
 }
 
-
-
-newUser("ahsdgdsgds", "sdhdsg", "sdhsdg", "sgsdg");
-printUserList();
 ?>

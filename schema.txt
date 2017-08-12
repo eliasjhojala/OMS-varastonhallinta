@@ -1,0 +1,24 @@
+actions {
+  id, user_id, thing_id, action_type_id, note, timestamp
+}
+
+action_types {
+  id, name
+}
+
+classes {
+  id, name
+}
+
+items {
+  id, name, class_id
+}
+
+users {
+  id, first_name, last_name, nick_name, member_id
+}
+
+action_type_id:s {
+  1: lisäys
+  2: poisto
+}
