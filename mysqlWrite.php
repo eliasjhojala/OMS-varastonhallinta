@@ -1,5 +1,5 @@
 <?php
-
+include 'auth.php';
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -11,8 +11,8 @@ else{
   echo "Connection succesfull";
 }
 
-$sql = "INSERT INTO MyGuests (firstname, lastname, email)
-VALUES ('John', 'Doe', 'john@example.com')";
+$sql = "INSERT INTO users (first_name, last_name, nick_name)
+VALUES ('Peter', 'Doe', 'john@example.com')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
