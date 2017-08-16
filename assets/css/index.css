@@ -1,330 +1,76 @@
-@import "https://fonts.googleapis.com/css?family=Open+Sans|Material+Icons|Ubuntu|Roboto";
-#linkbar {
-  background-color: #33652e;
-  text-align: left;
-  padding: 22px 40px 22px 0px;
-  width: 100%;
-  color: white;
-  float: right;
-  position: fixed;
-  z-index: 2;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  height: 20px;
-}
-@media screen and (max-width: 24cm) {
-  #linkbar {
-    text-align: left;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    height: 56px;
-    z-index: 10;
-  }
-}
-#linkbar #logo {
-  height: 80px;
-  width: auto;
-  position: absolute;
-  left: 30px;
-  top: 5px;
-}
-@media screen and (max-width: 24cm) {
-  #linkbar #logo {
-    display: none;
-  }
-}
-#linkbar.open #linkBarLinks {
-  left: 0;
-  opacity: 1;
-  transition: left 500ms, opacity 1ms ease 0ms;
-}
-#linkbar:not(.open) .toggle-menubox::before {
-  content: 'menu';
-}
-#linkbar.open .toggle-menubox::before {
-  content: 'close';
-}
-#linkbar #linkBarLinks {
-  box-shadow: none;
-}
-@media screen and (max-width: 24cm) {
-  #linkbar #linkBarLinks {
-    position: fixed;
-    left: -350px;
-    opacity: 0;
-    transition: left ease-in 600ms, opacity 1ms ease 500ms;
-    top: 56px;
-    background: white;
-    padding: 36px;
-    padding-top: 22px;
-    border-radius: 0px;
-    height: 100%;
-    width: 250px;
-    font-size: 20px;
-    max-width: 50%;
-    box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.23) inset, 3px 0px 0px 0px rgba(0, 0, 0, 0.03), 2.5px 0px 0px 0px rgba(0, 0, 0, 0.04), 2px 0px 0px 0px rgba(0, 0, 0, 0.05), 1.5px 0px 0px 0px rgba(0, 0, 0, 0.06), 1px 0px 0px 0px rgba(0, 0, 0, 0.07), 0.5px 0px 0px 0px rgba(0, 0, 0, 0.08);
-  }
-}
-#linkbar #linkBarLinks a {
-  margin-right: 40px;
-  z-index: 2;
-  text-decoration: none;
-  color: white;
-  text-transform: uppercase;
-}
-@media screen and (max-width: 24cm) {
-  #linkbar #linkBarLinks a {
-    margin-right: 8px;
-    display: block;
-    padding: 10px 0px;
-    color: rgba(0, 0, 0, 0.87);
-    text-transform: capitalize;
-    font-size: 15px;
-    font-weight: 600;
-    font-family: 'Roboto', 'Helvetica Neue';
-  }
-}
-#linkbar #menuBoxIcon, #linkbar #backIcon {
-  display: none;
-}
-@media screen and (max-width: 24cm) {
-  #linkbar #menuBoxIcon, #linkbar #backIcon {
-    display: inline-block;
-    height: 100%;
-    font-size: 28px;
-    text-decoration: none;
-    color: white;
-    vertical-align: middle;
-    line-height: 56px;
-    margin-left: 15px;
-  }
-}
-#linkbar #title {
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 20px;
-  margin-left: 12px;
-  font-family: 'Roboto';
-  font-size: 30px;
-}
-@media screen and (max-width: 24cm) {
-  #linkbar #title {
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 20px;
-    line-height: 56px;
-    margin-left: 12px;
-    font-family: 'Roboto';
-  }
-}
+/*
+Error: Invalid CSS after "    display": expected ";", was ":grid;"
+        on line 8 of C:/Users/Leevi/Documents/GitHub/OMS-varastonhallinta/assets/css/_varasto.scss
+        from line 5 of C:\Users\Leevi\Documents\GitHub\OMS-varastonhallinta\assets\css\index.scss
 
-.contactFormButton {
-  text-transform: uppercase;
-  background: #3a76e5;
-  color: #fff;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
-  transition: box-shadow 300ms ease;
-  border-radius: 3px;
-  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: bold;
-  padding: 18px;
-  font-size: 15px;
-  cursor: pointer;
-  float: right;
-  display: inline-block;
-  margin-top: 17px;
-}
-.contactFormButton:hover:not(:active) {
-  background-color: #3367d6;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
-}
-.contactFormButton:active {
-  background-color: #2959c0;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
-}
-.contactFormButton:hover:not(:active) {
-  background-color: #3367d6;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
-}
-.contactFormButton:active {
-  background-color: #2959c0;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
-}
+3: #siteContent {
+4:     margin:0;
+5:     padding:0;
+6:     width:100%;
+7:     height:100%
+8:     display:grid;
+9:     grid-template-columns: repeat(3, 1fr);
+10:     grid-template-rows: 1fr;
+11:     /*Tähän mediaquery*\/
+12:     grid-template-areas:
+13:         "own item inventory";
 
-.mobile {
-  display: none;
-}
-
-#contactFloatingButton {
-  visibility: hidden;
-}
-
-@media screen and (max-width: 24cm) {
-  .contactFormButton {
-    float: none;
-    margin-left: -3px;
-  }
-
-  .desktop {
-    display: none;
-  }
-
-  .mobile {
-    display: inline-block;
-  }
-
-  #beforeContactFormButton {
-    height: 0px;
-    padding: 0px;
-    margin: 0px;
-    clear: both;
-    display: block;
-  }
-
-  #contactFloatingButton {
-    visibility: visible;
-    width: 60px;
-    height: 60px;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    border-radius: 40px;
-    color: #ffffff;
-    font-size: 32px;
-    line-height: 60px;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    transition: bottom 0.4s;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    background: #4285f4;
-  }
-  #contactFloatingButton:hover, #contactFloatingButton:focus {
-    background: #3a76e5;
-  }
-  #contactFloatingButton:active {
-    background: #3367d6;
-  }
-
-  #contactFloatingButton.hidden {
-    bottom: -65px;
-    transition: bottom 0.4s;
-  }
-}
-.ripplelink {
-  position: relative;
-  overflow: hidden;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  z-index: 0;
-}
-
-.ink {
-  display: block;
-  position: absolute;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 100%;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -o-transform: scale(0);
-  transform: scale(0);
-}
-
-.animate {
-  -webkit-animation: ripple 0.65s linear;
-  -moz-animation: ripple 0.65s linear;
-  -ms-animation: ripple 0.65s linear;
-  -o-animation: ripple 0.65s linear;
-  animation: ripple 0.65s linear;
-}
-
-@-webkit-keyframes ripple {
-  100% {
-    opacity: 0;
-    -webkit-transform: scale(2.5);
-  }
-}
-@-moz-keyframes ripple {
-  100% {
-    opacity: 0;
-    -moz-transform: scale(2.5);
-  }
-}
-@-o-keyframes ripple {
-  100% {
-    opacity: 0;
-    -o-transform: scale(2.5);
-  }
-}
-@keyframes ripple {
-  100% {
-    opacity: 0;
-    transform: scale(2.5);
-  }
-}
-.buttonGrid {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-@media screen and (max-width: 24cm) {
-  .buttonGrid {
-    width: 370px;
-    max-width: 100%;
-  }
-}
-.buttonGrid .button {
-  margin-top: 8px;
-  margin-bottom: 8px;
-  text-transform: uppercase;
-  background: #3a76e5;
-  color: #fff;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
-  transition: box-shadow 300ms ease;
-  border-radius: 3px;
-  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: bold;
-  padding: 18px;
-  font-size: 15px;
-  cursor: pointer;
-  font-size: 20px;
-  width: 200px;
-  text-align: center;
-}
-.buttonGrid .button:hover:not(:active) {
-  background-color: #3367d6;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
-}
-.buttonGrid .button:active {
-  background-color: #2959c0;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
-}
-@media screen and (max-width: 24cm) {
-  .buttonGrid .button {
-    font-size: 15px;
-    padding: 14px;
-    width: 150px;
-  }
-}
-
-html {
-  padding: 0;
-  margin: 0;
-  background: white;
-  color: black;
-}
-html body {
-  padding: 0;
-  margin: 0;
-}
-html body #siteContent {
-  color: black;
-}
-
-/*# sourceMappingURL=index.css.map */
+Backtrace:
+C:/Users/Leevi/Documents/GitHub/OMS-varastonhallinta/assets/css/_varasto.scss:8
+C:\Users\Leevi\Documents\GitHub\OMS-varastonhallinta\assets\css\index.scss:5
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:1207:in `expected'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:1137:in `expected'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:1132:in `tok!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:786:in `block in try_declaration'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:1183:in `call'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:1183:in `rethrow'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:791:in `try_declaration'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:720:in `declaration_or_ruleset'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:685:in `block_child'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:677:in `block_contents'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:666:in `block'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:658:in `ruleset'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:684:in `block_child'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:674:in `block_contents'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:125:in `stylesheet'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:41:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:406:in `_to_tree'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:312:in `to_tree'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/stack.rb:88:in `block in with_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/stack.rb:88:in `with_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:159:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:8:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:298:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:391:in `run'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/exec/base.rb:52:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/lib/sass/exec/base.rb:19:in `parse!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.23/bin/sass:13:in `<top (required)>'
+C:/Program Files (x86)/Koala/bin/sass:18:in `load'
+C:/Program Files (x86)/Koala/bin/sass:18:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"    display\": expected \";\", was \":grid;\"\A         on line 8 of C:/Users/Leevi/Documents/GitHub/OMS-varastonhallinta/assets/css/_varasto.scss\A         from line 5 of C:\Users\Leevi\Documents\GitHub\OMS-varastonhallinta\assets\css\index.scss\A \A 3: #siteContent {\A 4:     margin:0;\A 5:     padding:0;\A 6:     width:100%;\A 7:     height:100%\A 8:     display:grid;\A 9:     grid-template-columns: repeat(3, 1fr);\A 10:     grid-template-rows: 1fr;\A 11:     /*Tähän mediaquery*/\A 12:     grid-template-areas:\A 13:         \"own item inventory\";"; }

@@ -1,0 +1,24 @@
+/* Varastonhallinnaalle spesifi scss */
+
+#siteContent {
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    /*Tähän mediaquery*/
+    grid-template-areas:
+        "own item inventory";
+
+    .own {
+        grid-template-area:own;
+    }
+    .item {
+        grid-template-area:item;
+    }
+    .inventory {
+        grid-template-area:inventory;
+    }
+}
