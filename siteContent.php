@@ -33,7 +33,7 @@
             <button>nappi</button>
             <button>usko jo!</button>
 
-            <textarea name="log_entry" rows="8" cols="80" placeholder="Lisää halutessasi merkintä esimerkiksi esineen käytettävyydestä"></textarea>
+            <textarea class="new-entry" name="new_entry" rows="8" cols="80" placeholder="Lisää halutessasi merkintä esimerkiksi esineen käytettävyydestä"></textarea>
             <input type="submit" value="Merkitse">
             <!-- Päivitetän ajaxilla-->
             <div class="well logs">
@@ -51,9 +51,9 @@
         <button class="tab"><h4>Varastossa</h4></button>
         <div class="well list">
             <!-- Malliesine js:ää varten -->
-            <div class="none own-item-sample own-item">
-                <span class="counter">1</span>
-                <p class="name">Saha</p>
+            <div class="none inventory-item-sample inventory-item">
+                <span class="counter">3</span>
+                <p class="name">Puolijoukkueteltta</p>
                 <div class="dropdown hidden">
                     <button>Nappi 1</button>
                     <button>Nappi 2</button>

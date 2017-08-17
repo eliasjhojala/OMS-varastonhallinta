@@ -2,6 +2,8 @@
 /* grafiikkavärit */
 /* Ikäkausivärit */
 @import "https://fonts.googleapis.com/css?family=Open+Sans|Material+Icons|Ubuntu|Roboto";
+@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400:600:700");
 #linkbar {
   background-color: #33652e;
   text-align: left;
@@ -324,11 +326,17 @@ img {
 }
 
 #siteContent {
+  max-width: 85vw;
+  justify-self: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
   /*Tähän mediaquery*/
   grid-template-areas: "own item inventory";
+}
+#siteContent > * {
+  /* Vaikuttaa vain kolmeen kenttään */
+  padding: 1em;
 }
 #siteContent .own {
   grid-area: own;
@@ -336,8 +344,21 @@ img {
 #siteContent .item {
   grid-area: item;
 }
+#siteContent .item form {
+  max-width: 100%;
+}
+#siteContent .item form .new-entry {
+  width: 100%;
+}
 #siteContent .inventory {
   grid-area: inventory;
+}
+#siteContent .inventory button.tab {
+  padding: 0.2em;
+}
+#siteContent .own, #siteContent .inventory {
+  display: grid;
+  grid-template: "subtitle" 1fr "list" 9fr / 1fr;
 }
 
 body {
@@ -373,6 +394,42 @@ body footer {
   grid-area: footer;
   background: #253764;
   min-height: 50px;
+}
+
+h1, h3, h4 {
+  font-family: lato;
+  margin-left: 1em;
+  text-transform: uppercase;
+}
+
+button > h4 {
+  margin: 0;
+  padding: 0.2em;
+}
+
+.list {
+  grid-area: list;
+  border: 1px solid #ccc;
+}
+.list .own-item, .list .inventory-item {
+  font-family: 'source sans pro';
+  padding: 0.3em;
+}
+.list .own-item p, .list .inventory-item p {
+  display: inline;
+  text-transform: lowercase;
+}
+.list .own-item span.counter, .list .inventory-item span.counter {
+  background: #333;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0;
+  padding-right: 0.3em;
+  padding-left: 0.3em;
+  font-size: 0.8em;
+}
+.list .own-item span.counter::after, .list .inventory-item span.counter::after {
+  content: "×";
 }
 
 html {
