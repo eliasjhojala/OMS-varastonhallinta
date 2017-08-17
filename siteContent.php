@@ -1,7 +1,4 @@
 <div id="siteContent">
-    <div style="padding-top:64px;"><!-- Nopea ja ruma ratkaisu. Tulee korjata tulevaisuudessa-->
-    </div>
-
     <div class="own">
         <h3>Lainassa</h3>
         <div class="well list">
@@ -28,20 +25,16 @@
         </div>
 
         <form>
-            <fieldset class="item-id-wrapper">
-                <input type="text" name="item_id"  autofocus placeholder="Syötä viivakoodi skannerilla tai käsin">
-                <input class="send" type="submit" value="Siirrä">
-            </fieldset>
+            <input type="text" name="item_id"  autofocus placeholder="Syötä viivakoodi skannerilla tai käsin">
+            <input class="send" type="submit" value="Siirrä">
         </form>
         <form>
-            <fieldset class="conditon-wrapper">
-                <button>Muutama</button>
-                <button>nappi</button>
-                <button>usko jo!</button>
+            <button>Muutama</button>
+            <button>nappi</button>
+            <button>usko jo!</button>
 
-                <textarea name="log_entry" rows="8" cols="80" placeholder="Lisää halutessasi merkintä eimerkiksi esineen käytettävyydestä"></textarea>
-                <input type="submit" value="Merkitse">
-            </fieldset>
+            <textarea name="log_entry" rows="8" cols="80" placeholder="Lisää halutessasi merkintä esimerkiksi esineen käytettävyydestä"></textarea>
+            <input type="submit" value="Merkitse">
             <!-- Päivitetän ajaxilla-->
             <div class="well logs">
                 <!-- Mallimerkintä JS:lle-->
