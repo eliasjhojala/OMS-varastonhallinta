@@ -306,6 +306,10 @@
         width: 80px; } }
 
 /* Varastonhallinnaalle spesifi scss */
+* {
+  font-family: "source sans pro", "Helvetica Neue";
+}
+
 /* Pidetään kuvat rajojen sisällä */
 img {
   max-height: 100%;
@@ -419,7 +423,7 @@ button > h4 {
       display: block; }
 
 div.status p {
-  font-family: "source sans pro";
+  font-family: "source sans pro", "Helvetica Neue";
   text-transform: lowercase;
   font-weight: lighter;
   font-size: 12px;
@@ -444,6 +448,7 @@ div.status .error::before {
 .formwrapper {
   max-width: 100%;
   display: flex;
+<<<<<<< HEAD
   flex-direction: column; }
   .formwrapper .new-entry {
     width: 100%;
@@ -470,6 +475,40 @@ div.status .error::before {
       padding-left: 0.3em;
       font-size: 0.8em;
       background: #009688; }
+=======
+  flex-direction: column;
+}
+.formwrapper .new-entry {
+  width: 100%;
+  resize: vertical;
+  margin-bottom: 0.5em;
+}
+.formwrapper .iteminput {
+  margin-bottom: 1em;
+  display: flex;
+}
+.formwrapper .iteminput .item_id {
+  flex-grow: 1;
+}
+.formwrapper .typebuttons {
+  margin-bottom: 1em;
+}
+.formwrapper .logs {
+  flex-grow: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-family: "source sans pro", "Helvetica Neue";
+}
+.formwrapper .logs .timestamp {
+  background: #333;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0;
+  padding-right: 0.3em;
+  padding-left: 0.3em;
+  font-size: 0.8em;
+}
+>>>>>>> origin/master
 
 .hidden {
   display: none; }
