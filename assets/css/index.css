@@ -284,7 +284,7 @@
     max-width: 100%;
   }
 }
-.buttonGrid .button {
+.buttonGrid button {
   margin-top: 8px;
   margin-bottom: 8px;
   text-transform: uppercase;
@@ -302,16 +302,54 @@
   width: 200px;
   text-align: center;
 }
-.buttonGrid .button:hover:not(:active) {
+.buttonGrid button:hover:not(:active) {
   background-color: #3367d6;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
 }
-.buttonGrid .button:active {
+.buttonGrid button:active {
   background-color: #2959c0;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
 }
 @media screen and (max-width: 24cm) {
-  .buttonGrid .button {
+  .buttonGrid button {
+    font-size: 15px;
+    padding: 14px;
+    width: 150px;
+  }
+}
+
+.buttonBar {
+  margin-left: 20px;
+  width: 300px;
+}
+.buttonBar .button {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  background: #3a76e5;
+  color: #fff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+  transition: box-shadow 300ms ease;
+  border-radius: 3px;
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: bold;
+  padding: 18px;
+  font-size: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  width: 100px;
+  text-align: center;
+}
+.buttonBar .button:hover:not(:active) {
+  background-color: #3367d6;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+}
+.buttonBar .button:active {
+  background-color: #2959c0;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
+}
+@media screen and (max-width: 24cm) {
+  .buttonBar .button {
     font-size: 15px;
     padding: 14px;
     width: 150px;
@@ -517,6 +555,10 @@ div.status .error::before {
   padding-right: 0.3em;
   padding-left: 0.3em;
   font-size: 0.8em;
+}
+
+.SP-logo {
+  margin: 25px;
 }
 
 html {
