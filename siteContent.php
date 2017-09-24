@@ -9,16 +9,24 @@
                 <span class="counter">1</span>
                 <p class="name">Saha</p>
                 <div class="dropdown hidden">
-                    <button>Poista listasta</button>
+                    <button>Poista kaikki</button>
+                    <button class="list-toggler">Näytä yksitellen</button>
+                    <div class="item-list hidden">
+                      <p class="unique-item">Saha 123<button class="remove">Poista</button></p>
+                    </div>
                 </div>
+
             </div>
             <template id="own-item-template">
               <div class="none own-item-sample own-item active">
                   <span class="counter">1</span>
                   <p class="name">Saha</p>
                   <div class="dropdown hidden">
-                      <button>Poista listasta</button>
-
+                      <button>Poista kaikki</button>
+                      <button class="list-toggler">Näytä yksitellen</button>
+                      <div class="item-list hidden">
+                        <p class="unique-item">Saha 123<button class="remove">Poista</button></p>
+                      </div>
                   </div>
               </div>
             </template>
@@ -27,7 +35,8 @@
                 <span class="counter">4</span>
                 <p class="name">Kirves</p>
                 <div class="dropdown hidden">
-                  <button>Poista listasta</button>
+                  <button>Poista kaikki</button>
+                  <button>Näytä yksitellen</button>
                 </div>
             </div>
 
@@ -35,7 +44,8 @@
                 <span class="counter">145</span>
                 <p class="name">Naula</p>
                 <div class="dropdown hidden">
-                    <button>Poista listasta</button>
+                    <button>Poista kaikki</button>
+                    <button>Näytä yksitellen</button>
                 </div>
             </div>
             <!-- Tähän haetaan ajaxilla dataa joka muokataan js:llä kivaan muotoon-->
