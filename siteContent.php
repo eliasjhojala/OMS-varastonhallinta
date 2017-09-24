@@ -9,19 +9,25 @@
                 <span class="counter">1</span>
                 <p class="name">Saha</p>
                 <div class="dropdown hidden">
-                    <button>Nappi 1</button>
-                    <button>Nappi 2</button>
-                    <button>Nappi 3</button>
+                    <button>Poista listasta</button>
                 </div>
             </div>
+            <template id="own-item-template">
+              <div class="none own-item-sample own-item active">
+                  <span class="counter">1</span>
+                  <p class="name">Saha</p>
+                  <div class="dropdown hidden">
+                      <button>Poista listasta</button>
+
+                  </div>
+              </div>
+            </template>
 
             <div class="none own-item-sample own-item">
                 <span class="counter">4</span>
                 <p class="name">Kirves</p>
                 <div class="dropdown hidden">
-                    <button>Nappi 1</button>
-                    <button>Nappi 2</button>
-                    <button>Nappi 3</button>
+                  <button>Poista listasta</button>
                 </div>
             </div>
 
@@ -29,9 +35,7 @@
                 <span class="counter">145</span>
                 <p class="name">Naula</p>
                 <div class="dropdown hidden">
-                    <button>Nappi 1</button>
-                    <button>Nappi 2</button>
-                    <button>Nappi 3</button>
+                    <button>Poista listasta</button>
                 </div>
             </div>
             <!-- Tähän haetaan ajaxilla dataa joka muokataan js:llä kivaan muotoon-->
