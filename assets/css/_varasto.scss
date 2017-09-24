@@ -135,6 +135,11 @@ button>h4{
 .list{
     grid-area:list;
     border:1px solid #ccc;
+    overflow-y: hidden;
+    height: 70vh;
+    &:hover {
+      overflow-y: auto;
+    }
     .own-item, .inventory-item{
         font-family: $bodyfont;
         padding: 0.3em;
@@ -154,11 +159,6 @@ button>h4{
               button{
                 float:right;
               }
-
-              &::before {
-                content: "• ";
-              }
-
             }
           }
         }
