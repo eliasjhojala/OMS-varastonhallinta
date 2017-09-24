@@ -54,49 +54,7 @@
     </div>
 
 
-    <div class="item">
-        <!-- Päivitetään js:llä ja ajaxilla-->
-        <div class="status">
-            <p class="done active">Valmis</p>
-            <p class="updating">Päivittää</p>
-            <p class="error">Virhe</p>
-        </div>
-        <div class="formwrapper">
-            <div class="iteminput">
-                <input class="item_id" type="text" name="item_id"  autofocus placeholder="Syötä viivakoodi skannerilla tai käsin">
-                <input class="send" type="submit" value="Siirrä">
-            </div>
-
-            <div class="typebuttons">
-                <button class="ok active">Kunnossa</button>
-                <button class="fixable">Korjattavissa</button>
-                <button class="broken">Tosi rikki</button>
-            </div>
-
-            <textarea class="new-entry" name="new_entry" rows="8" cols="80" placeholder="Lisää halutessasi merkintä esimerkiksi esineen käytettävyydestä"></textarea>
-            <input type="submit" value="Merkitse">
-            <!-- Päivitetän ajaxilla-->
-            <div class="well logs">
-                <!-- Mallimerkintä JS:lle-->
-                <p class="none log-entry type-fixed">
-                    <span class="timestamp">1.2.2017</span>
-                    Kahva meni rikki
-                </p>
-
-                <p class="none log-entry type-fixed">
-                    <span class="timestamp">12.1.2017</span>
-                    Löydettiin sutattuna ja rikottuna ja vaikka mitä...
-                </p>
-
-                <p class="none log-entry type-fixed">
-                    <span class="timestamp">31.12.2016</span>
-                    Joku neropatti oli tehnyt sitä ja tätä.
-                </p>
-
-            </div>
-
-        </div>
-    </div>
+    <?php include 'itemColumn.php'; ?>
 
 
     <div class="inventory">

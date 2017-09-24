@@ -1,0 +1,50 @@
+input, textarea, select, trix-editor {
+  display: block;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 4px;
+  margin: 4px 0;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 3px;
+  transition-duration: 150ms;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue';
+}
+
+input[type=text], input[type=password], textarea, trix-editor {
+  &:focus {
+    box-shadow: 0px 0px 1px 1px $themeColor2;
+    border-color: $themeColor2;
+  }
+  &:hover:not(:focus):not([disabled=disabled]) {
+    border: 1px solid rgb(140, 140, 140);
+  }
+}
+
+input[type="submit"] {
+  padding: 4px;
+  background: white;
+  &:hover, &:focus {
+    box-shadow: 0px 0px 10px rgba(black, 0.2);
+  }
+  &:active {
+    box-shadow: 0px 0px 2px opacify($themeColor2, 0.4) inset;
+    border-color: $themeColor2;
+    background: linear-gradient(darken(white, 8%), darken(white, 5%));
+  }
+}
+
+input {
+  &[type="radio"] {
+    display: none;
+    &+label {
+      -webkit-transition: all 0.25s;
+      font-family: 'Roboto';
+      @include disable-select();
+    }
+    &:not(:checked) + label { color: rgba(0,0,0,0.6); }
+    &:checked +label { color: #006cf8; }
+    &+label:not(:first-of-type) { margin-left: 1.5em; }
+  }
+}

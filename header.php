@@ -1,11 +1,11 @@
-<?php beginHeader("site-header"); ?>
-    <div class="title"><h1>Varastonhallinta</h1></div>
+<div id="linkbar">
+    <a id="menuBoxIcon" href class="toggle-menubox material-icons"></a>
+    <span class="title">Varastonhallinta</span>
     <div id="linkBarLinks">
       <?php
-        makeLink("Nappi 1", "");
-        makeLink("Nappi 2", "");
-        makeLink("Nappi 3", "");
-        makeLink("Dropdown", "");
+        makeLink("Lainaa", "");
+        makeLink("Palauta", "");
+        makeLink("Kirjaudu ulos", "");
       ?>
-    </nav>
-<?php endHeader(); ?>
+    </div>
+</div>

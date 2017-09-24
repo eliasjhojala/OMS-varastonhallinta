@@ -89,18 +89,6 @@ body{
 
         color: #fff;
         background: $samoaja;
-        .title{
-            grid-area: title;
-            h1 {
-              margin-left: 0.5em;
-            }
-        }
-        .logo{
-            grid-area: logo;
-        }
-        .site-nav{
-            grid-area: nav;
-        }
     }
     #siteContent{
         grid-area:content;
@@ -110,6 +98,7 @@ body{
 
         background: $partionsininen;
         min-height: 50px;
+        @include disable-select();
     }
 }
 
@@ -172,6 +161,7 @@ button>h4{
         }
         span.counter{
             @include counter;
+            background: $materialBlue;
             &::after{
                 content: "×";
             }
@@ -182,7 +172,7 @@ button>h4{
         display:none;
     }
     .own-item.active{
-        background: rgba(255, 219, 134, 0.6);
+        background: $materialBlueLight;
         .dropdown{
             display:block;
         }
@@ -213,13 +203,13 @@ div.status{
         transform:  translate(-0.6em, 0.4em);
     }
     .done::before{
-        background: $samoaja;
+        background: $materialDoneColor;
     }
     .updating::before{
-        background: $sudari;
+        background: $materialWaitingColor;
     }
     .error::before{
-        background: $seikkailija;
+        background: $materialErrorColor;
     }
 }
 
@@ -250,6 +240,7 @@ div.status{
         font-family: $bodyfont;
         .timestamp{
             @include counter;
+            background: $materialTeal;
         }
     }
 }

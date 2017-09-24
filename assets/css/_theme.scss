@@ -10,6 +10,52 @@
   $bottom-bar-text-color: white;
   $linkbar-bg-color: #33652e;
   $linkbar-bg-color-with-alpha: $theme-color-red-with-alpha;
+  
+  
+  // Colors
+  $white: rgb(255, 255, 255);
+  $lightGreen: rgb(66, 240, 177);
+  $lightYellow: rgb(255, 255, 180);
+  $lightBlue: rgb(60, 190, 255);
+  $lightRed: rgb(255, 76, 76);
+
+  $lightGray: rgb(200, 200, 200);
+  $grayBlack: rgb(40, 40, 40);
+
+  $themeColor0: $white;
+  $themeColor1: $lightYellow;
+  $themeColor2: $lightBlue;
+  $themeColor3: $lightGreen;
+
+  $header-font-color: $themeColor3;
+  $linkBarLineColor: $lightGray;
+  $textDefaultColor: $grayBlack;
+
+  $flash-neutral: $lightBlue;
+  $flash-critical: $lightRed;
+  $flash-positive: $lightGreen;
+
+  $lessonColor: $themeColor2;
+  $examColor: $themeColor2;
+  $letterColor: $themeColor3;
+  $messageColor: $themeColor2;
+  $questionsColor: $themeColor2;
+  $groupColor: $themeColor2;
+
+  // Measures
+  $content-margin: 25px;
+  $vw-medium: 24cm;
+  $vw-small: 24cm*0.7;
+  $vw-xsmall: 8cm;
+  
+  $materialBlue: #2196F3;
+  $materialBlueLight: #BBDEFB;
+  $materialTeal: #009688;
+  
+  $materialDoneColor: #4caf50;
+  $materialErrorColor: #d32f2f;
+  $materialWaitingColor: #FF9800;
+
 
 
   @mixin material-shadow($size:null) {
@@ -44,4 +90,11 @@
     box-shadow: none;
     background: none;
     padding: 0px;
+  }
+  
+  @mixin disable-select() {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
