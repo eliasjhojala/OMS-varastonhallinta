@@ -1,10 +1,12 @@
-<header class="site-header">
+<?php beginHeader("site-header"); ?>
     <div class="title"><h1>Varastonhallinta</h1></div>
-    <div class=logo><img src="assets/logo-512-bgvihree.png" alt="OMS-logo"></div>
+    <div class="logo"><img src="white-logo-with-alpha-512.png" alt="OMS-logo"></div>
     <nav class="site-nav buttonBar">
-        <button>Nappi 1</button>
-        <button>Nappi 2</button>
-        <button>Nappi 3</button>
-        <button>Dropdown</button>
+      <?php
+        button("Nappi 1");
+        button("Nappi 2");
+        button("Nappi 3");
+        button("Dropdown");
+      ?>
     </nav>
-</header>
+<?php endHeader(); ?>

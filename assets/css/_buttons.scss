@@ -134,7 +134,7 @@
   flex-wrap: wrap;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	.button {
+	button {
 		margin-top: 8px;
 		margin-bottom: 8px;
 		@include button();
@@ -148,4 +148,23 @@
 		}
 	}
 	
+}
+
+
+.buttonBar {
+	margin-left: 20px;
+	width: 300px;
+	.button {
+		margin-top: 8px;
+		margin-bottom: 8px;
+		@include button();
+		font-size: 20px;
+		width: 100px;
+		text-align: center;
+		@media screen and (max-width: 24cm) {
+			font-size: 15px;
+			padding: 14px;
+			width: 150px;
+		}
+	}
 }
