@@ -1,4 +1,4 @@
 auth.php
-index.css
-index.css.map
-.sass-cache/
+assets/css/index.css
+assets/css/index.css.map
+assets/.sass-cache/
