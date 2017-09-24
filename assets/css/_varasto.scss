@@ -143,9 +143,28 @@ button>h4{
         font-family: $bodyfont;
         padding: 0.3em;
 
-        p{
+        &>p{
             display:inline;
             text-transform:lowercase;
+        }
+        .dropdown {
+          p{
+            display: inline;
+          }
+
+          .item-list {
+
+            .unique-item {
+              button{
+                float:right;
+              }
+
+              &::before {
+                content: "• ";
+              }
+
+            }
+          }
         }
         span.counter{
             @include counter;
@@ -153,6 +172,7 @@ button>h4{
                 content: "×";
             }
         }
+
     }
     .own-item > .dropdown{
         display:none;
@@ -228,4 +248,8 @@ div.status{
             @include counter;
         }
     }
+}
+
+.hidden {
+  display:none;
 }
