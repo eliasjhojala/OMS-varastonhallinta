@@ -1,7 +1,7 @@
 <head>
   <link rel="stylesheet" type="text/css" href="assets/css/index.css">
   <?php
-    $js = array("jquery", "index", "app", "ajax");
+    $js = array("jquery", "index", "app", "ajax", "csstemput");
   ?>
 
   <?php
