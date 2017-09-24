@@ -364,6 +364,10 @@
 }
 
 /* Varastonhallinnaalle spesifi scss */
+* {
+  font-family: "source sans pro", "Helvetica Neue";
+}
+
 /* Pidetään kuvat rajojen sisällä */
 img {
   max-height: 100%;
@@ -474,7 +478,7 @@ button > h4 {
   border: 1px solid #ccc;
 }
 .list .own-item, .list .inventory-item {
-  font-family: "source sans pro";
+  font-family: "source sans pro", "Helvetica Neue";
   padding: 0.3em;
 }
 .list .own-item > p, .list .inventory-item > p {
@@ -513,7 +517,7 @@ button > h4 {
 }
 
 div.status p {
-  font-family: "source sans pro";
+  font-family: "source sans pro", "Helvetica Neue";
   text-transform: lowercase;
   font-weight: lighter;
   font-size: 12px;
@@ -565,7 +569,7 @@ div.status .error::before {
   flex-grow: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  font-family: "source sans pro";
+  font-family: "source sans pro", "Helvetica Neue";
 }
 .formwrapper .logs .timestamp {
   background: #333;
