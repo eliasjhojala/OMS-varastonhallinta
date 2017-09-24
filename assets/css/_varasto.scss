@@ -78,6 +78,7 @@ body{
     grid-template-areas: "header" "content" "footer";
 
     header{
+        padding: 14px;
         max-height: 128px;
         grid-area:header;
 
@@ -90,6 +91,9 @@ body{
         background: $samoaja;
         .title{
             grid-area: title;
+            h1 {
+              margin-left: 0.5em;
+            }
         }
         .logo{
             grid-area: logo;
