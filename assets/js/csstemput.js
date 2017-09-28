@@ -8,8 +8,8 @@ $(function() {
   });
 
 
-  $("#left").children(".tab-content").slice(2).addClass("hidden");
-  $("#right").children(".tab-content").slice(2).addClass("hidden");
+  $("#left").children(".tab-content").slice(1).addClass("hidden");
+  $("#right").children(".tab-content").slice(1).addClass("hidden");
 
   $(".tab-button").click(function(){
     //Hide other tabs and show one
