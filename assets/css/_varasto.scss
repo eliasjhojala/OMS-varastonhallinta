@@ -140,7 +140,7 @@ button>h4{
     &:hover {
       overflow-y: auto;
     }
-    .own-item, .inventory-item{
+    .item-group, .inventory-item{
         font-family: $bodyfont;
         padding: 0.3em;
 
@@ -171,10 +171,10 @@ button>h4{
         }
 
     }
-    .own-item > .dropdown{
+    .item-group > .dropdown{
         display:none;
     }
-    .own-item.active{
+    .item-group.active{
         background: $materialBlueLight;
         .dropdown{
             display:block;

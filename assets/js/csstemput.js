@@ -1,6 +1,6 @@
 $(function() {
-  $(".own-item").click(function(){
-    $(".own-item").removeClass("active");
+  $(".item-group").click(function(){
+    $(".item-group").removeClass("active");
     $(this).toggleClass("active");
   });
   $(".dropdown .list-toggler").click(function(){
