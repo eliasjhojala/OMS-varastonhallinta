@@ -367,6 +367,66 @@
   }
 }
 
+.SP-logo {
+  margin: 25px;
+}
+
+input, textarea, select {
+  display: block;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 4px;
+  margin: 4px 0;
+  border: 1px solid #c8c8c8;
+  border-radius: 3px;
+  transition-duration: 150ms;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Helvetica Neue';
+}
+
+input[type=text]:focus, input[type=password]:focus, textarea:focus, trix-editor:focus {
+  box-shadow: 0px 0px 1px 1px #3cbeff;
+  border-color: #3cbeff;
+}
+input[type=text]:hover:not(:focus):not([disabled=disabled]), input[type=password]:hover:not(:focus):not([disabled=disabled]), textarea:hover:not(:focus):not([disabled=disabled]), trix-editor:hover:not(:focus):not([disabled=disabled]) {
+  border: 1px solid #8c8c8c;
+}
+
+input[type="submit"] {
+  padding: 4px;
+  background: white;
+}
+input[type="submit"]:hover, input[type="submit"]:focus {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+input[type="submit"]:active {
+  box-shadow: 0px 0px 2px #3cbeff inset;
+  border-color: #3cbeff;
+  background: linear-gradient(#ebebeb, #f2f2f2);
+}
+
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"] + label {
+  -webkit-transition: all 0.25s;
+  font-family: 'Roboto';
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+input[type="radio"]:not(:checked) + label {
+  color: rgba(0, 0, 0, 0.6);
+}
+input[type="radio"]:checked + label {
+  color: #006cf8;
+}
+input[type="radio"] + label:not(:first-of-type) {
+  margin-left: 1.5em;
+}
+
 /* Varastonhallinnaalle spesifi scss */
 * {
   font-family: "source sans pro", "Helvetica Neue";
@@ -557,6 +617,11 @@ div.status .error::before {
 }
 .formwrapper .iteminput .item_id {
   flex-grow: 1;
+  border-radius: 3px 0 0 3px;
+}
+.formwrapper .iteminput .send {
+  border-radius: 0 3px 3px 0;
+  border-left-width: 0;
 }
 .formwrapper .typebuttons {
   margin-bottom: 1em;
@@ -580,66 +645,6 @@ div.status .error::before {
 
 .hidden {
   display: none;
-}
-
-.SP-logo {
-  margin: 25px;
-}
-
-input, textarea, select, trix-editor {
-  display: block;
-  font-family: inherit;
-  font-size: 16px;
-  padding: 4px;
-  margin: 4px 0;
-  border: 1px solid #c8c8c8;
-  border-radius: 3px;
-  transition-duration: 150ms;
-  outline: none;
-  box-sizing: border-box;
-  font-family: 'Roboto', 'Helvetica Neue';
-}
-
-input[type=text]:focus, input[type=password]:focus, textarea:focus, trix-editor:focus {
-  box-shadow: 0px 0px 1px 1px #3cbeff;
-  border-color: #3cbeff;
-}
-input[type=text]:hover:not(:focus):not([disabled=disabled]), input[type=password]:hover:not(:focus):not([disabled=disabled]), textarea:hover:not(:focus):not([disabled=disabled]), trix-editor:hover:not(:focus):not([disabled=disabled]) {
-  border: 1px solid #8c8c8c;
-}
-
-input[type="submit"] {
-  padding: 4px;
-  background: white;
-}
-input[type="submit"]:hover, input[type="submit"]:focus {
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-input[type="submit"]:active {
-  box-shadow: 0px 0px 2px #3cbeff inset;
-  border-color: #3cbeff;
-  background: linear-gradient(#ebebeb, #f2f2f2);
-}
-
-input[type="radio"] {
-  display: none;
-}
-input[type="radio"] + label {
-  -webkit-transition: all 0.25s;
-  font-family: 'Roboto';
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-input[type="radio"]:not(:checked) + label {
-  color: rgba(0, 0, 0, 0.6);
-}
-input[type="radio"]:checked + label {
-  color: #006cf8;
-}
-input[type="radio"] + label:not(:first-of-type) {
-  margin-left: 1.5em;
 }
 
 html {
