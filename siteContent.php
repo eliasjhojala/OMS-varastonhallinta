@@ -32,6 +32,7 @@
     <?php foreach($options as $option) { ?>
       <?php $id = explode(",", $option)[0]; ?>
       <div class="tab-content" id="<?php echo $id."-tab-content"; ?>">
+        <?php showItems(getItems()); ?>
       </div>
     <?php } ?>
 
