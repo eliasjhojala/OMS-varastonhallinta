@@ -1,16 +1,46 @@
 <div id="siteContent">
 
   <div class="column" id="left">
+    <?php generateTabs("cart, Kori; loaned, Lainassa"); ?>
   </div>
   
   <div class="column" id="center">
   </div>
   
   <div class="column" id="right">
+    <?php generateTabs("reserved, Varattu; storage, Varastossa"); ?>
   </div>
 
 </div>
 
+
+<?php
+
+  function generateTabs($optionsAsString) {
+    $options = explode(";", $optionsAsString)
+    ?>
+
+    <div class="tab-buttons">
+    <?php foreach($options as $option) { ?>
+      <?php $id = explode($option)[0]; ?>
+      <?php $name = explode($option)[1]; ?>
+      <?php button($name, "tab-button", $id."-tab-button"); ?>
+    <?php } ?>
+    </div>
+
+    <?php foreach($options as $option) { ?>
+      <?php $id = explode($option)[0]; ?>
+      <div class="tab-content" id="<?php echo $id."-tab-content"; ?>">
+      </div>
+    <?php } ?>
+  
+  <?php
+  }
+
+?>
+
+
+<?php /*
 <div id="oldDatedSiteContent">
 
     <div class="own">
@@ -33,7 +63,7 @@
           <?php showItems(getItems()); ?>
         </div>
     </div>
-</div>
+</div> */ ?>
 
 <?php
   function getItems() {
