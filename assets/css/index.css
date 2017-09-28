@@ -327,12 +327,12 @@ input[type=text]:focus, input[type=password]:focus, textarea:focus, trix-editor:
 input[type=text]:hover:not(:focus):not([disabled=disabled]), input[type=password]:hover:not(:focus):not([disabled=disabled]), textarea:hover:not(:focus):not([disabled=disabled]), trix-editor:hover:not(:focus):not([disabled=disabled]) {
   border: 1px solid #8c8c8c; }
 
-input[type="submit"] {
+input[type="button"] {
   padding: 4px;
   background: white; }
-  input[type="submit"]:hover, input[type="submit"]:focus {
+  input[type="button"]:hover, input[type="button"]:focus {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); }
-  input[type="submit"]:active {
+  input[type="button"]:active {
     box-shadow: 0px 0px 2px #3cbeff inset;
     border-color: #3cbeff;
     background: linear-gradient(#ebebeb, #f2f2f2); }

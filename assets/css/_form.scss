@@ -22,7 +22,7 @@ input[type=text], input[type=password], textarea, trix-editor {
   }
 }
 
-input[type="submit"] {
+input[type="button"] {
   padding: 4px;
   background: white;
   &:hover, &:focus {
