@@ -1,7 +1,7 @@
 <?php
 
-function button($text) {
-  echo"<button>".$text."</button>";
+function button($text, $class=null, $id=null) {
+  echo'<button class="'.$class.'" id="'.$id.'">".$text."</button>';
 }
 
 function makeLink($text, $href) {
