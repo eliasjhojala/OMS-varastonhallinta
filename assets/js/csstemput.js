@@ -6,4 +6,13 @@ $(function() {
   $(".dropdown .list-toggler").click(function(){
   	$(this).siblings(".item-list").toggleClass("hidden");
   });
+
+
+
+  $(".tab-button").click(function(){
+    var elementName = $(this).attr('id').split("-")[0] + "-tab-content";
+    $(this).parent().siblings().addClass("hidden");
+    $(elementName).removeClass("hidden");
+  });
+
 });
