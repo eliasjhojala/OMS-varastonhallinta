@@ -18,19 +18,19 @@
 <?php
 
   function generateTabs($optionsAsString) {
-    $options = explode(";", $optionsAsString)
+    $options = explode(";", $optionsAsString);
     ?>
 
     <div class="tab-buttons">
     <?php foreach($options as $option) { ?>
-      <?php $id = explode($option)[0]; ?>
-      <?php $name = explode($option)[1]; ?>
+      <?php $id = explode(",", $option)[0]; ?>
+      <?php $name = explode(",", $option)[1]; ?>
       <?php button($name, "tab-button", $id."-tab-button"); ?>
     <?php } ?>
     </div>
 
     <?php foreach($options as $option) { ?>
-      <?php $id = explode($option)[0]; ?>
+      <?php $id = explode(",", $option)[0]; ?>
       <div class="tab-content" id="<?php echo $id."-tab-content"; ?>">
       </div>
     <?php } ?>
