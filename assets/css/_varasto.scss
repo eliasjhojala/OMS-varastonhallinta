@@ -130,6 +130,19 @@ button>h4{
 
 
 
+.tab-button {
+  margin-bottom: -1;
+  border-radius: 2;
+  border: 1px solid rgb(204, 204, 204);
+  z-index: 1000;
+  
+  &.active {
+    background: #2296f3;
+    border-bottom: 1px solid black;
+    outline: 0;
+  }
+  
+}
 
 
 .tab-content {
