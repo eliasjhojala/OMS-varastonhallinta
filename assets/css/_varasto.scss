@@ -135,11 +135,8 @@ button>h4{
 .list{
     grid-area:list;
     border:1px solid #ccc;
-    overflow-y: hidden;
+    overflow-y: auto;
     height: 70vh;
-    &:hover {
-      overflow-y: auto;
-    }
     .item-group, .inventory-item{
         font-family: $bodyfont;
         padding: 0.3em;
@@ -231,6 +228,11 @@ div.status{
         display:flex;
         .item_id{
             flex-grow: 1;
+            border-radius: 3px 0 0 3px;
+        }
+        .send{
+          border-radius: 0 3px 3px 0;
+          border-left-width: 0;
         }
     }
     .typebuttons{
