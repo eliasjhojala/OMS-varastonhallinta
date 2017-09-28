@@ -3,10 +3,11 @@
   <div class="column" id="left">
     <?php generateTabs("cart, Kori; loaned, Lainassa"); ?>
   </div>
-  
+
   <div class="column" id="center">
+    <?php include 'itemColumn.php'; ?>
   </div>
-  
+
   <div class="column" id="right">
     <?php generateTabs("reserved, Varattu; storage, Varastossa"); ?>
   </div>
@@ -33,7 +34,7 @@
       <div class="tab-content" id="<?php echo $id."-tab-content"; ?>">
       </div>
     <?php } ?>
-  
+
   <?php
   }
 
@@ -51,7 +52,6 @@
     </div>
 
 
-    <?php include 'itemColumn.php'; ?>
 
 
     <div class="inventory">
@@ -68,12 +68,12 @@
 <?php
   function getItems() {
     $items = array("");
-    
+
     for($i = 0; $i < 50; $i++) {
       $items[$i] = array("count" => "45", "name" => "kirves", "item-list" =>
       array(42, 646, 23, 34, 12));
     }
-    
+
     return $items;
   }
 ?>
