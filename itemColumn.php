@@ -9,14 +9,14 @@
       <form>
         <div class="iteminput">
             <input class="item_id" type="text" name="item_id"  autofocus placeholder="Syötä viivakoodi skannerilla tai käsin">
-            <input class="send" type="submit" value="Siirrä">
+            <input class="send" type="button" value="Siirrä">
         </div>
 
         <?php radioButtons(); ?>
         <?php textArea(); ?>
         <?php submit(); ?>
         <?php printLogs(getLogs()); ?>
-        
+
       </form>
     </div>
 </div>
