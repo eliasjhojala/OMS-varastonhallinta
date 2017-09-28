@@ -17,7 +17,7 @@ $(function() {
     $(this).parent().siblings().addClass("hidden");
     $(elementName).removeClass("hidden");
     //Change active tab visuals
-    $(this).sibling().removeClass("active")
+    $(this).siblings().removeClass("active")
     $(this).addClass("active")
   });
 
