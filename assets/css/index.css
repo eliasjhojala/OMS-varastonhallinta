@@ -529,27 +529,27 @@ button > h4 {
   padding: 0.2em;
 }
 
-.list {
+.tab-content {
   grid-area: list;
   border: 1px solid #ccc;
   overflow-y: auto;
   height: 70vh;
 }
-.list .item-group, .list .inventory-item {
+.tab-content .item-group, .tab-content .inventory-item {
   font-family: "source sans pro", "Helvetica Neue";
   padding: 0.3em;
 }
-.list .item-group > p, .list .inventory-item > p {
+.tab-content .item-group > p, .tab-content .inventory-item > p {
   display: inline;
   text-transform: lowercase;
 }
-.list .item-group .dropdown p, .list .inventory-item .dropdown p {
+.tab-content .item-group .dropdown p, .tab-content .inventory-item .dropdown p {
   display: inline;
 }
-.list .item-group .dropdown .item-list .unique-item button, .list .inventory-item .dropdown .item-list .unique-item button {
+.tab-content .item-group .dropdown .item-list .unique-item button, .tab-content .inventory-item .dropdown .item-list .unique-item button {
   float: right;
 }
-.list .item-group span.counter, .list .inventory-item span.counter {
+.tab-content .item-group span.counter, .tab-content .inventory-item span.counter {
   background: #333;
   color: #fff;
   border-radius: 5px;
@@ -559,16 +559,16 @@ button > h4 {
   font-size: 0.8em;
   background: #2196F3;
 }
-.list .item-group span.counter::after, .list .inventory-item span.counter::after {
+.tab-content .item-group span.counter::after, .tab-content .inventory-item span.counter::after {
   content: "×";
 }
-.list .item-group > .dropdown {
+.tab-content .item-group > .dropdown {
   display: none;
 }
-.list .item-group.active {
+.tab-content .item-group.active {
   background: #BBDEFB;
 }
-.list .item-group.active .dropdown {
+.tab-content .item-group.active .dropdown {
   display: block;
 }
 
