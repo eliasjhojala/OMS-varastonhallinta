@@ -10,9 +10,13 @@ $(function() {
 
 
   $(".tab-button").click(function(){
+    //Hide other tabs and show one
     var elementName = "#" + $(this).attr('id').split("-")[0] + "-tab-content";
     $(this).parent().siblings().addClass("hidden");
     $(elementName).removeClass("hidden");
+    //Change active tab visuals
+    $(this).sibling().removeClass("active")
+    $(this).addClass("active")
   });
 
 });
