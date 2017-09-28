@@ -23,14 +23,14 @@
 
     <div class="tab-buttons">
     <?php foreach($options as $option) { ?>
-      <?php $id = explode(",", $option)[0]; ?>
-      <?php $name = explode(",", $option)[1]; ?>
+      <?php $id = trim(explode(",", $option)[0]); ?>
+      <?php $name = trim(explode(",", $option)[1]); ?>
       <?php button($name, "tab-button", $id."-tab-button"); ?>
     <?php } ?>
     </div>
 
     <?php foreach($options as $option) { ?>
-      <?php $id = explode(",", $option)[0]; ?>
+      <?php $id = trim(explode(",", $option)[0]); ?>
       <div class="tab-content" id="<?php echo $id."-tab-content"; ?>">
         <?php showItems(getItems()); ?>
       </div>
