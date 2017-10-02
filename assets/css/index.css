@@ -438,13 +438,17 @@ button > h4 {
 
 .tab-button {
   margin-bottom: -1;
-  border-radius: 2;
+  border-radius: 3px 3px 0px 0px;
   border: 1px solid #cccccc;
-  z-index: 1000; }
+  z-index: 1000;
+  outline: 0;
+  background: white;
+  color: black;
+  font-size: 16px; }
   .tab-button.active {
     background: #2296f3;
     border-bottom: 1px solid black;
-    outline: 0; }
+    color: white; }
 
 .tab-content {
   grid-area: list;
