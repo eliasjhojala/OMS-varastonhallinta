@@ -272,5 +272,9 @@ div.status{
 }
 
 div.login {
-  
+  background: white;
+  form {
+    border: 1px solid $lightGray;
+    border-radius: 5px;
+  }
 }
