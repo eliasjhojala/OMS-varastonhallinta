@@ -6,6 +6,7 @@ PHP:
   - Esineiden listaus
   - usereiden listaus
   - sisään kirjautuminen
+  - kolon koneen tunnistus ja taikasessio
 JS:
   - sisään kirjautuminen
   - Keskisarakkeen nappeihin js:
