@@ -1,5 +1,13 @@
 var request;
 
+/*Kutsuu php-funktiota ja palauttaa sen datan arrayna*/
+function getArray($name) {
+  $.post("/assets/phpFunctions/mysqlFunctions.php",{"do":$name}, function(data) {
+    alert(data)
+  })
+
+}
+
 $(document).ready(function(){
     $('.subtitle').click(function(){
         if (request) {

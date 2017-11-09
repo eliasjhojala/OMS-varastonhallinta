@@ -1,16 +1,14 @@
 <?php
+// ini_set('display_errors', 'On');
+/*
+Kaikki funktiot on muutettava sellaisiksi, että ne palauttavat vain jsonia tai teksiä
+*/
 
 include 'auth.php';
 
-// Create connection
-$dbConn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($dbConn->connect_error) {
-    die("Connection failed: " . $dbConn->connect_error ."<br>");
-}
-else{
-  echo "Connection succesfull<br>";
-}
+$dbConn = new mysqli($servername, $username, $password);
+mysqli_select_db($dbConn, $dbname);
+
 
 function newUser($f_n, $l_n, $n_n, $mem_id) {
   $sql = "INSERT INTO users (first_name, last_name, nick_name, member_id)
@@ -21,22 +19,22 @@ function newUser($f_n, $l_n, $n_n, $mem_id) {
 
 function newItem($item_id, $name, $class_id) {
   global $current_user_id;
-  
+
   $sql = "INSERT INTO items (id, name, class_id)
   VALUES ('$item_id', '$name', '$class_id')";
   sqlQuery($sql);
-  
+
   $sql = "INSERT INTO actions (user_id, thing_id, action_type_id)
   VALUES ('$current_user_id', '$item_id', '1')";
   sqlQuery($sql);
 }
 
-function newClass($f_n, $l_n, $n_n, $mem_id) {
+/*function newClass($f_n, $l_n, $n_n, $mem_id) {
   $sql = "INSERT INTO users (first_name, last_name, nick_name, member_id)
   VALUES ('$f_n', '$l_n', '$n_n', '$mem_id')";
 
   sqlQuery($sql);
-}
+}*/
 
 function userList() {
   $sql = "SELECT * FROM users";
@@ -51,9 +49,22 @@ function printUserList() {
 }
 
 function itemList() {
-  $sql = "SELECT * FROM items";
-  return sqlQuery($sql);
+  $sql = "SELECT * FROM `items`";
+  echo 'Seuraavaksi itemit:\n'; // Debuggaukseen
+  echo json_encode(sqlQuery($sql));
 }
+
+/* Oletetaan, että session kyseisellä keksillä on olemassa. Palauttaa 'etunimi sukunimi'*/
+/*  $sql = "SELECT user_id FROM sessions WHERE 'session_id'=".$cookie;
+  $userID = sqlQuery($sql);
+  $sql = "SELECT first_name, last_name FROM users WHERE 'member_id'=".$userID;
+  $result = sqlQuery($sql);
+
+  if ($result->num_rows == 0 and $result->num_columns == 2) {
+
+  }
+
+}*/
 
 function myLoans() {
   $sql = "SELECT * FROM actions WHERE 'user_id'=$current_user_id AND 'action_type_id'=".actionTypeId("loan");
@@ -66,9 +77,9 @@ function myLoans() {
     if($loaned) { array_push($loans, $thing_id); }
     if($returned) { unset($loans[array_search($thing_id)]); }
   }
-  
+
   return $loans;
-  
+
 }
 
 function printMyLoansPlain() {
@@ -85,9 +96,9 @@ function printMyLoansPlain() {
       }
       $item_name = $item_name . $row1[name];
     }
-    
+
     echo $item_name."<br>";
-    
+
   }
 }
 
@@ -96,9 +107,40 @@ function sqlQuery($sql) {
   return $dbConn->query($sql);
 }
 
+function cellContent($query, $columName) {
+  $row = $query->fetch_assoc();
+  return $row[$columName];
+}
+
 function closeConnection() { //Should not be used in most cases
   global $dbConn;
   $dbConn->close();
 }
+
+
+if (isset($_POST['do'])){
+  switch($_POST['do']) {
+    case 'test':
+      echo 'testi';
+      break;
+    case 'items':
+      itemList();
+      break;
+  }
+}
+
+if (isset($_GET['do'])){
+  echo 'get asetettu';
+  switch($_GET['do']) {
+    case 'test':
+      echo 'testi';
+      break;
+    case 'items':
+      itemList();
+      break;
+  }
+}
+
+
 
 ?>

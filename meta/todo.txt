@@ -1,0 +1,31 @@
+Tehtävää:
+
+PHP:
+  - Php jolla merkitään tuotelista henkilölle varatuksi
+  - Esineiden palautus
+  - Esineiden listaus
+  - usereiden listaus
+  - sisään kirjautuminen
+  - kolon koneen tunnistus ja taikasessio
+JS:
+  - sisään kirjautuminen
+  - Keskisarakkeen nappeihin js:
+    - Esineen lainaus
+    - Muistiinopano
+  - Esineiden listaus
+  - ajaxin tilapallukan päivitys
+CSS + HTML:
+  - sisään kirjautuminen
+  - data ulos
+  - esineiden palautus
+  - esineiden lisäys
+
+
+Valmiina:
+
+PHP:
+  ???
+JS:
+  ???
+HTML + CSS:
+  ???
