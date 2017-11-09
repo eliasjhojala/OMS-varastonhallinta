@@ -28,10 +28,11 @@ function validated() {
   $sql = "SELECT * FROM sessions WHERE 'session_id'=$session_id";
   $result = sqlQuery($sql);
   if($result != null) {
-    global $current_user_id;
-    $current_user_id = $result[0]["user_id"];
+    // global $current_user_id;
+    // $current_user_id = $result[0]["user_id"];
+    return true;
   }
-  else return false;
+  else { return false; }
 }
 
 function getUserId() {
