@@ -4,6 +4,8 @@ PHP:
   - Php jolla merkitään tuotelista henkilölle varatuksi
   - Esineiden palautus
   - Esineiden listaus
+  - usereiden listaus
+  - sisään kirjautuminen
 JS:
   - sisään kirjautuminen
   - Keskisarakkeen nappeihin js:
