@@ -142,7 +142,7 @@ switch($_POST['do']) {
   case 'items':
     listItems();
     break;
-};/*
+};
 switch($_GET['do']) {
   case 'test':
     echo 'testi'
@@ -150,6 +150,6 @@ switch($_GET['do']) {
   case 'items':
     listItems();
     break;
-};*/
+};
 
 ?>
