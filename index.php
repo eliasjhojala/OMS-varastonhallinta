@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <html>
   <?php include 'assets/phpFunctions/functions.php'; ?>
   <?php include 'head.php'; ?>
