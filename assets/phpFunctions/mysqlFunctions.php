@@ -18,22 +18,22 @@ function newUser($f_n, $l_n, $n_n, $mem_id) {
 
 function newItem($item_id, $name, $class_id) {
   global $current_user_id;
-  
+
   $sql = "INSERT INTO items (id, name, class_id)
   VALUES ('$item_id', '$name', '$class_id')";
   sqlQuery($sql);
-  
+
   $sql = "INSERT INTO actions (user_id, thing_id, action_type_id)
   VALUES ('$current_user_id', '$item_id', '1')";
   sqlQuery($sql);
 }
 
-function newClass($f_n, $l_n, $n_n, $mem_id) {
+/*function newClass($f_n, $l_n, $n_n, $mem_id) {
   $sql = "INSERT INTO users (first_name, last_name, nick_name, member_id)
   VALUES ('$f_n', '$l_n', '$n_n', '$mem_id')";
 
   sqlQuery($sql);
-}
+}*/
 
 function userList() {
   $sql = "SELECT * FROM users";
@@ -63,9 +63,9 @@ function myLoans() {
     if($loaned) { array_push($loans, $thing_id); }
     if($returned) { unset($loans[array_search($thing_id)]); }
   }
-  
+
   return $loans;
-  
+
 }
 
 function printMyLoansPlain() {
@@ -82,9 +82,9 @@ function printMyLoansPlain() {
       }
       $item_name = $item_name . $row1[name];
     }
-    
+
     echo $item_name."<br>";
-    
+
   }
 }
 
