@@ -1,4 +1,4 @@
 <?php
   include 'functions.php';
-  if(validated()) { echo getUserId(); } else { echo "Epäonnistunut validaatio."; }
+  if(validated()) { echo "Onnistui: ".getUserId(); } else { echo "Epäonnistunut validaatio."; }
 ?>
