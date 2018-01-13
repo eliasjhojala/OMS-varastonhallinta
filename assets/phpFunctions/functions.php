@@ -2,6 +2,8 @@
 
 <?php
 
+$current_user_id = "esgsg";
+
 function button($text, $class=null, $id=null) {
   echo'<button class="'.$class.'" id="'.$id.'">'.$text.'</button>';
 }
@@ -25,17 +27,18 @@ function radioButton($name, $value, $text) {
 
 function validated() {
   $session_id = 2;
-  $sql = "SELECT * FROM sessions WHERE 'session_id'=$session_id";
+  $sql = "SELECT * FROM sessions WHERE session_id=$session_id";
   $result = sqlQuery($sql);
-  if($result != null) {
-    // global $current_user_id;
-    // $current_user_id = $result[0]["user_id"];
+  global $current_user_id;
+  if(mysqli_num_rows($result) != 0) {
+    $current_user_id = 10;
     return true;
   }
   else { return false; }
 }
 
 function getUserId() {
+  global $current_user_id;
   return $current_user_id;
 }
 

@@ -93,6 +93,11 @@ function sqlQuery($sql) {
   return $dbConn->query($sql);
 }
 
+function cellContent($query, $columName) {
+  $row = $query->fetch_assoc();
+  return $row[$columName];
+}
+
 function closeConnection() { //Should not be used in most cases
   global $dbConn;
   $dbConn->close();
