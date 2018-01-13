@@ -13,12 +13,6 @@ if ($dbConn->connect_error) {
     die("Connection failed: " . $dbConn->connect_error ."<br>");
 }
 
-// Create connection
-$wp_dbConn = new mysqli($wp_servername, $wp_username, $wp_password, $wp_dbname);
-// Check connection
-if ($dbwpConn->connect_error) {
-    die("Connection failed: " . $wp_dbConn->connect_error ."<br>");
-}
 
 function newUser($f_n, $l_n, $n_n, $mem_id) {
   $sql = "INSERT INTO users (first_name, last_name, nick_name, member_id)
@@ -116,11 +110,6 @@ function sqlQuery($sql) {
   return $dbConn->query($sql);
 }
 
-function wp_sqlQuery($sql) {
-  global $wp_dbConn;
-  return $wp_dbConn->query($sql);
-}
-
 function cellContent($query, $columName) {
   $row = $query->fetch_assoc();
   return $row[$columName];
@@ -131,26 +120,23 @@ function closeConnection() { //Should not be used in most cases
   $dbConn->close();
 }
 
-if ($_POST['do'] === "itemList") {
-    echo itemList();
-}
 
 
 switch($_POST['do']) {
   case 'test':
-    echo 'testi'
+    echo 'testi';
     break;
   case 'items':
     listItems();
     break;
-};
+}
 switch($_GET['do']) {
   case 'test':
-    echo 'testi'
+    echo 'testi';
     break;
   case 'items':
     listItems();
     break;
-};
+}
 
 ?>
