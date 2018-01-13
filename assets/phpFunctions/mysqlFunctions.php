@@ -1,4 +1,5 @@
 <?php
+ini_set('display_errors', 'On');
 /*
 Kaikki funktiot on muutettava sellaisiksi, että ne palauttavat vain jsonia tai teksiä
 */

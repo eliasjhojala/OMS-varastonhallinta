@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php session_start();
+
+ini_set('display_errors', 'On');
+?>
 
 <html>
   <?php include 'assets/phpFunctions/functions.php'; ?>

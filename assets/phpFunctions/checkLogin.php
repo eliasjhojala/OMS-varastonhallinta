@@ -1,4 +1,5 @@
 <?php
+ini_set('display_errors', 'On');
 
   include 'mysqlFunctions.php';
 
@@ -8,9 +9,9 @@
   $session_id = session_id();
   $wp_sql = "SELECT * FROM wp_users WHERE user_login=$username";
   $wp_result = wp_sqlQuery($wp_sql);
-  
+
   if(mysqli_num_rows($wp_result) != 0) {
-    
+
     require_once('class-phpass.php');
     $wp_hasher = new PasswordHash(8, true);
     if($wp_hasher->CheckPassword(trim($password), cellContent($wp_result, "user_pass"))) {
@@ -20,9 +21,9 @@
     else {
       header('Location: ../../siteLogin.php');
     }
-    
+
   }
-  
+
   else { header('Location: ../../siteLogin.php'); }
 
 
