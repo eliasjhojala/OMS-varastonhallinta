@@ -49,8 +49,20 @@ function printUserList() {
 
 function itemList() {
   $sql = "SELECT * FROM items";
-  return sqlQuery($sql);
+  return json_encode(sqlQuery($sql));
 }
+
+/* Oletetaan, että session kyseisellä keksillä on olemassa. Palauttaa 'etunimi sukunimi'*/
+/*  $sql = "SELECT user_id FROM sessions WHERE 'session_id'=".$cookie;
+  $userID = sqlQuery($sql);
+  $sql = "SELECT first_name, last_name FROM users WHERE 'member_id'=".$userID;
+  $result = sqlQuery($sql);
+
+  if ($result->num_rows == 0 and $result->num_columns == 2) {
+
+  }
+
+}*/
 
 function myLoans() {
   $sql = "SELECT * FROM actions WHERE 'user_id'=$current_user_id AND 'action_type_id'=".actionTypeId("loan");
@@ -101,6 +113,10 @@ function cellContent($query, $columName) {
 function closeConnection() { //Should not be used in most cases
   global $dbConn;
   $dbConn->close();
+}
+
+if ($_GET['do'] === "itemList") {
+    echo itemList();
 }
 
 ?>
