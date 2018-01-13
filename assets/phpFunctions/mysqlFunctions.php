@@ -1,5 +1,5 @@
 <?php
-ini_set('display_errors', 'On');
+// ini_set('display_errors', 'On');
 /*
 Kaikki funktiot on muutettava sellaisiksi, että ne palauttavat vain jsonia tai teksiä
 */
@@ -51,7 +51,7 @@ function printUserList() {
 function itemList() {
   $sql = "SELECT * FROM `items`";
   echo 'Seuraavaksi itemit:\n'; // Debuggaukseen
-  echo queryAndPrint($sql);
+  echo json_encode(sqlQuery($sql));
 }
 
 /* Oletetaan, että session kyseisellä keksillä on olemassa. Palauttaa 'etunimi sukunimi'*/
@@ -107,22 +107,8 @@ function sqlQuery($sql) {
   return $dbConn->query($sql);
 }
 
-function queryAndPrint($sql) {
-  while( $row = sqlQuery($sql)->fetch_assoc()){
-    $new_array[] = $row; // Inside while loop
-  }
-  echo json_encode($new_array);
-  
-  $rows = array();
-  while($r = mysqli_fetch_assoc($sth)) {
-    $rows[] = $r;
-  }
-  print json_encode($rows);
-}
-
 function cellContent($query, $columName) {
-  $newQuery = $query;
-  $row = $newQuery->fetch_assoc();
+  $row = $query->fetch_assoc();
   return $row[$columName];
 }
 
@@ -133,26 +119,26 @@ function closeConnection() { //Should not be used in most cases
 
 
 if (isset($_POST['do'])){
-switch($_POST['do']) {
-  case 'test':
-    echo 'testi';
-    break;
-  case 'items':
-    itemList();
-    break;
-}
+  switch($_POST['do']) {
+    case 'test':
+      echo 'testi';
+      break;
+    case 'items':
+      itemList();
+      break;
+  }
 }
 
 if (isset($_GET['do'])){
   echo 'get asetettu';
-switch($_GET['do']) {
-  case 'test':
-    echo 'testi';
-    break;
-  case 'items':
-    itemList();
-    break;
-}
+  switch($_GET['do']) {
+    case 'test':
+      echo 'testi';
+      break;
+    case 'items':
+      itemList();
+      break;
+  }
 }
 
 
