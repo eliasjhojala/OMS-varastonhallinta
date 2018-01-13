@@ -9,6 +9,13 @@ if ($dbConn->connect_error) {
     die("Connection failed: " . $dbConn->connect_error ."<br>");
 }
 
+// Create connection
+$wp_dbConn = new mysqli($wp_servername, $wp_username, $wp_password, $wp_dbname);
+// Check connection
+if ($dbwpConn->connect_error) {
+    die("Connection failed: " . $wp_dbConn->connect_error ."<br>");
+}
+
 function newUser($f_n, $l_n, $n_n, $mem_id) {
   $sql = "INSERT INTO users (first_name, last_name, nick_name, member_id)
   VALUES ('$f_n', '$l_n', '$n_n', '$mem_id')";
@@ -103,6 +110,11 @@ function printMyLoansPlain() {
 function sqlQuery($sql) {
   global $dbConn;
   return $dbConn->query($sql);
+}
+
+function wp_sqlQuery($sql) {
+  global $wp_dbConn;
+  return $wp_dbConn->query($sql);
 }
 
 function cellContent($query, $columName) {
