@@ -51,7 +51,7 @@ function printUserList() {
 function itemList() {
   $sql = "SELECT * FROM `items`";
   echo 'Seuraavaksi itemit:\n'; // Debuggaukseen
-  echo json_encode(sqlQuery($sql));
+  echo queryAndPrint($sql);
 }
 
 /* Oletetaan, että session kyseisellä keksillä on olemassa. Palauttaa 'etunimi sukunimi'*/
@@ -105,6 +105,13 @@ function printMyLoansPlain() {
 function sqlQuery($sql) {
   global $dbConn;
   return $dbConn->query($sql);
+}
+
+function queryAndPrint($sql) {
+  while( $row = sqlQuery($sql)->fetch_assoc()){
+    $new_array[] = $row; // Inside while loop
+  }
+  echo json_encode($new_array);
 }
 
 function cellContent($query, $columName) {
