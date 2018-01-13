@@ -1,4 +1,7 @@
 <?php
+/*
+Kaikki funktiot on muutettava sellaisiksi, että ne palauttavat vain jsonia tai teksiä
+*/
 
 include 'auth.php';
 
@@ -115,8 +118,18 @@ function closeConnection() { //Should not be used in most cases
   $dbConn->close();
 }
 
-if ($_GET['do'] === "itemList") {
+if ($_POST['do'] === "itemList") {
     echo itemList();
+}
+
+
+switch($_POST['do']) {
+  case 'test':
+    echo 'testi'
+    break;
+  case 'items':
+    listItems();
+    break;
 }
 
 ?>
