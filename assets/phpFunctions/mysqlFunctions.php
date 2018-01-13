@@ -135,7 +135,7 @@ if ($_POST['do'] === "itemList") {
     echo itemList();
 }
 
-
+if (isset($_POST)){
 switch($_POST['do']) {
   case 'test':
     echo 'testi'
@@ -143,7 +143,9 @@ switch($_POST['do']) {
   case 'items':
     listItems();
     break;
-};
+}};
+
+if (isset($_GET)){
 switch($_GET['do']) {
   case 'test':
     echo 'testi'
@@ -151,6 +153,6 @@ switch($_GET['do']) {
   case 'items':
     listItems();
     break;
-};
+}};
 
 ?>
