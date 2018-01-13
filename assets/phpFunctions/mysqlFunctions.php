@@ -6,12 +6,8 @@ Kaikki funktiot on muutettava sellaisiksi, että ne palauttavat vain jsonia tai 
 
 include 'auth.php';
 
-// Create connection
-$dbConn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($dbConn->connect_error) {
-    die("Connection failed: " . $dbConn->connect_error ."<br>");
-}
+$dbConn = new mysqli($servername, $username, $password);
+mysqli_select_db($dbConn, $dbname);
 
 
 function newUser($f_n, $l_n, $n_n, $mem_id) {
@@ -111,7 +107,8 @@ function sqlQuery($sql) {
 }
 
 function cellContent($query, $columName) {
-  $row = $query->fetch_assoc();
+  $newQuery = $query;
+  $row = $newQuery->fetch_assoc();
   return $row[$columName];
 }
 
