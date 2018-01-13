@@ -121,7 +121,7 @@ function closeConnection() { //Should not be used in most cases
 }
 
 
-if (isset($_POST)){
+if (isset($_POST['do'])){
 switch($_POST['do']) {
   case 'test':
     echo 'testi';
@@ -129,9 +129,11 @@ switch($_POST['do']) {
   case 'items':
     listItems();
     break;
-}};
+}
+}
 
-if (isset($_GET)){
+if (isset($_GET['do'])){
+  echo 'get asetettu';
 switch($_GET['do']) {
   case 'test':
     echo 'testi';
@@ -139,6 +141,12 @@ switch($_GET['do']) {
   case 'items':
     listItems();
     break;
-}};
+}
+if ($_GET['do'] === "testataan"){
+  echo 'testataan';
+};
+}
+
+
 
 ?>
