@@ -112,6 +112,12 @@ function queryAndPrint($sql) {
     $new_array[] = $row; // Inside while loop
   }
   echo json_encode($new_array);
+  
+  $rows = array();
+  while($r = mysqli_fetch_assoc($sth)) {
+    $rows[] = $r;
+  }
+  print json_encode($rows);
 }
 
 function cellContent($query, $columName) {

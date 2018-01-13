@@ -5,7 +5,7 @@
       <?php
         makeLink("Lainaa", "");
         makeLink("Palauta", "");
-        makeLink("Kirjaudu ulos", "");
+        makeLink("Kirjaudu ulos", "assets/phpFunctions/logOut.php");
       ?>
     </div>
 </div>
