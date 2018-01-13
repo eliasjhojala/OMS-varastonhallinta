@@ -53,8 +53,9 @@ function printUserList() {
 }
 
 function itemList() {
-  $sql = "SELECT * FROM items";
-  return json_encode(sqlQuery($sql));
+  $sql = "SELECT * FROM `items`";
+  echo 'Seuraavaksi itemit:\n'; // Debuggaukseen
+  echo json_encode(sqlQuery($sql));
 }
 
 /* Oletetaan, että session kyseisellä keksillä on olemassa. Palauttaa 'etunimi sukunimi'*/
@@ -127,7 +128,7 @@ switch($_POST['do']) {
     echo 'testi';
     break;
   case 'items':
-    listItems();
+    itemList();
     break;
 }
 }
@@ -139,12 +140,9 @@ switch($_GET['do']) {
     echo 'testi';
     break;
   case 'items':
-    listItems();
+    itemList();
     break;
 }
-if ($_GET['do'] === "testataan"){
-  echo 'testataan';
-};
 }
 
 
