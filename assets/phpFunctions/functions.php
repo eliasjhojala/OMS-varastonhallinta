@@ -25,11 +25,5 @@ function radioButton($name, $value, $text) {
   echo '<label for="'.$name.$value.$text.'">'.$text.'</label>';
 }
 
-function validated() {
-  $session_id = session_id();
-  $sql = "SELECT * FROM `sessions` WHERE `session_id` LIKE '".$session_id."'";
-  return mysqli_num_rows(sqlQuery($sql)) != 0;
-}
-
 
 ?>
