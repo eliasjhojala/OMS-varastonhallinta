@@ -549,6 +549,19 @@ div.login {
     border: 1px solid #c8c8c8;
     border-radius: 5px; }
 
+.login form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  margin-top: 25vh;
+  max-width: 80vw; }
+.login p {
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: #101010; }
+.login input {
+  width: 100%; }
+
 html {
   padding: 0;
   margin: 0;
