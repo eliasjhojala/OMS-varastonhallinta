@@ -1,7 +1,8 @@
 auth.php
 assets/css/index.css
 assets/css/index.css.map
-assets/.sass-cache/
+assets/.sass-cache/**
 assets/css/index.css.map
-
-assets/css/.sass-cache/207d42ec4ab88a53399750fa05b5516016b6d970/_varasto.scssc
+**.scssc
+**.map
+**.css

@@ -3,9 +3,11 @@
     <span class="title">Varastonhallinta</span>
     <div id="linkBarLinks">
       <?php
-        makeLink("Lainaa", "");
-        makeLink("Palauta", "");
-        makeLink("Kirjaudu ulos", "assets/phpFunctions/logOut.php");
+        if(validated()) {
+          makeLink("Lainaa", "");
+          makeLink("Palauta", "");
+          makeLink("Kirjaudu ulos", "assets/phpFunctions/logOut.php");
+        }
       ?>
     </div>
 </div>

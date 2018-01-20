@@ -3,6 +3,6 @@
     <p> Kirjaudu ensin sisään</p>
     <input id="username" name="username" type="text" placeholder="Käyttjätunnus">
     <input id="password" name="password" type="password" placeholder="Salasana">
-    <input type="submit">
+    <input type="submit" value="Kirjaudu sisään">
   </form>
 </div>
