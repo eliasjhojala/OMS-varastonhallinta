@@ -15,7 +15,12 @@
   </div>
 
 </div>
-
+<template id="item-note">
+  <p class="log-entry">
+    <span class="timestamp"></span>
+    <span class="message"></span>
+  </p>
+</template>
 <template id='item-group-sample'>
   <div class="item-group">
     <span class="counter"></span>

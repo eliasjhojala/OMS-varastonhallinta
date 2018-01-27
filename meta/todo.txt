@@ -33,7 +33,7 @@ HTML + CSS:
 
 
   27-1-2018 klo 13-46
-  
+
   - item groupin name DONE
       - nykyään name on class.name + item.id --> pitäisi olla class.name + item.name DONE
   - funktio joka hakee kaiken kerrallaan, eikä kaksi erillistä funktiota itemsseille ja classeseille DONE
@@ -41,3 +41,7 @@ HTML + CSS:
   - item groupin contentin hidden/not hidden
   - ei turhaa datatyypin konverttausta set_itemssissä ja set_classesissa
   - funktio jossa kaikki suoritettavat funktiot aina kun tietokantaa muokataan tai sivu ladataan
+
+  27-1-2018 16-26
+  - Lisää varastoDataan osa, joka merkkaa jokaisen itemin id:llään muodossa, jossa ei tarvitse parsia mitään
+  - csstempuissa täydennä selectItem() ja bindItemButtons() 

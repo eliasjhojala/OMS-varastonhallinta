@@ -48,6 +48,7 @@ var varastoData = {
         $('#reserved-tab-content').append(template);
       }
     }
+    bindItemButtons();
   }
 }
 
@@ -83,7 +84,7 @@ $(function(){
       });
 
       e.preventDefault();
-      
+
     });
 
 });

@@ -2,7 +2,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="assets/css/index.css">
   <?php
-    $js = array("jquery", "csstemput", "ajax");
+    $js = array("jquery", "csstemput", "ajax", "index");
   ?>
 
   <?php
