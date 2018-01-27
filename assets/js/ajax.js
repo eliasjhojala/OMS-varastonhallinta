@@ -64,4 +64,26 @@ $(function(){
         $('#reserved-tab-content').prepend('<div class="item-group">'+items[i].name+'</div>');
       }
     });
+
+
+    $('#form').html($('#form-template').html());
+
+    $('#form').submit(function(e) {
+      $.post( "email.php", $( "#form" ).serialize() )
+      .done(function() {
+        $('#form').html($('#form-template').html());
+        $('#form .notification').remove();
+        $('#form #submit').before($('#success-template').html());
+        setTimeout(function() { $('#form .notification').addClass('hideSlow'); }, 3000);
+      })
+      .fail(function() {
+        $('#form .notification').remove();
+        $('#form #submit').before($('#error-template').html());
+        setTimeout(function() { $('#form .notification').addClass('hideSlow'); }, 3000);
+      });
+
+      e.preventDefault();
+      
+    });
+
 });

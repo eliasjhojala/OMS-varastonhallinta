@@ -5,14 +5,14 @@ PHP:
   - Esineiden palautus
   - Esineiden listaus
   - usereiden listaus
-  - sisään kirjautuminen
+  - sisään kirjautuminen DONE
   - kolon koneen tunnistus ja taikasessio
 JS:
-  - sisään kirjautuminen
+  - sisään kirjautuminen ???
   - Keskisarakkeen nappeihin js:
     - Esineen lainaus
     - Muistiinopano
-  - Esineiden listaus
+  - Esineiden listaus DONE
   - ajaxin tilapallukan päivitys
 CSS + HTML:
   - sisään kirjautuminen
@@ -29,3 +29,15 @@ JS:
   ???
 HTML + CSS:
   ???
+
+
+
+  27-1-2018 klo 13-46
+  
+  - item groupin name DONE
+      - nykyään name on class.name + item.id --> pitäisi olla class.name + item.name DONE
+  - funktio joka hakee kaiken kerrallaan, eikä kaksi erillistä funktiota itemsseille ja classeseille DONE
+
+  - item groupin contentin hidden/not hidden
+  - ei turhaa datatyypin konverttausta set_itemssissä ja set_classesissa
+  - funktio jossa kaikki suoritettavat funktiot aina kun tietokantaa muokataan tai sivu ladataan
