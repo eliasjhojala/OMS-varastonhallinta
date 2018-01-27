@@ -1,6 +1,7 @@
 var varastoData = {
   items: Array(),
   classes: Array(),
+  /* Käytä vain set_* funktioita arrayiden päivittämiseen. Ne myös päivittävät html:n automaattisesti */
   set_items: function (i) {
     this.items = i;
     this.updateLists();
@@ -9,29 +10,42 @@ var varastoData = {
     this.classes = c;
     this.updateLists();
   },
+  /* Kutsuu fuktioita oikein ja hoitaa kaiken kerralla. */
+  update_all: function(){
+    getArrayAsString('items', function(data){
+      varastoData.set_items(JSON.parse(data));
+    })
+    getArrayAsString('classes', function(data){
+      varastoData.set_classes(JSON.parse(data));
+    })
+  },
+  /* Päivittää html:n */
   updateLists: function(){
     if (this.items.length>0 && this.classes.length>0){
-      console.log('Alkutesti läpi, jatketaan...')
+      // Classes by some id
       c = {};
       for(i=0;i<this.classes.length;i++){
         c[this.classes[i].id]={className:this.classes[i].name,classItems:Array()};
       }
+      // Add items to classes
       for(i=0;i<this.items.length;i++){
         c[this.items[i].class_id].classItems.push(this.items[i]);
       }
-      console.log(c)
+      // Append html class by class
       for(i=0;i<this.classes.length;i++){
         current = c[this.classes[i].id];
-        console.log('index: '+i+', current: ')
-        console.log(current)
-        template = $('#item-group-sample').children('.item-group').clone();
+        console.log('index: '+i+', current: ');
+        console.log(current);
+        template = $($('template#item-group-sample').html());
         template.find('.counter').text(current.classItems.length);
+        template.find('.name').text(current.className);
         lista = template.find('.item-list>ul');
-        listaHTML = ""
+        listaHTML = "";
         for(j=0;j<current.classItems.length;j++){
-          listaHTML += '<li className="unique-item">'+current.name+' #'+current.classItems[j].id+'</li>';
+          listaHTML += '<li className="unique-item">'+current.className+' #'+current.classItems[j].name+'</li>';
         }
         lista.html(listaHTML);
+        $('#reserved-tab-content').append(template);
       }
     }
   }
